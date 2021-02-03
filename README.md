@@ -1,6 +1,6 @@
 <h1 align="center">
 </br>
-  <img src="./public/assets/img/logoComplete.png" width="450">
+  <img src="./public/assets/img/logoComplete.png" width="650">
 </br>
 </br>
 </h1>
@@ -11,8 +11,8 @@
 </br>
 <h2>Responsive Layout</h2>
 <p align="center" style="object-fit: cover">
-  <img src="./src/shots/shotPC-1.png" width=400 title="Login">
-  <img src="./src/shots/shotPC-2.png" width=400 title="Login">
+  <img src="./src/shots/shotPC-1.png" width=450 title="Login">
+  <img src="./src/shots/shotPC-2.png" width=450 title="Login">
 </p>
 </br>
 <h2>Mobile</h2>
