@@ -25,7 +25,7 @@
 - ✅ **Buscar por vagas**
 - ✅ **Anunciar vagas**
 - ✅ **Entrar em contato com os anunciantes**
-- 👨‍💻 **Em desenvolvimento ! **
+- 👨‍💻 **Em desenvolvimento !**
 
 ## Features Futuras
 - 👉🏻 Sistema de Login
