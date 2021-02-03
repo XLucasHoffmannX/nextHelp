@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    {% include "head.html" %}
+</head>
+
+<body>
+    <div class="main">
+        <button class="float">
+            <img src="https://img.icons8.com/officel/20/000000/whatsapp.png" />
+        </button>
+        <main id="container">
+            <div class="menu-head flex-row">
+                <li><a href="/">Home</a></li>
+                <li><a href="">Artigos</a></li>
+                <li><a href="">Sobre</a></li>
+            </div>
+            <aside class="aside"></aside>
+            <header class="header flex-column">
+                <div class="head">
+                    <a class="img" href="/"><img src="/assets/img/logoComplete.png" alt="logo next help"></a>
+                </div>
+                {% block header %}{% endblock %}
+            </header>
+        </main>
+        {% block content %}
+        {% endblock %}
+    </div>
+    <footer id="footer" class="flex-column">
+        <div class="content-center flex-column">
+            <p class="name-source info">Desenvolvido por @Hoffmann 😉</p>
+            <a href="/"><img src="/assets/img/logoText.png" alt="logo next help"></a>
+        </div>
+        <p class="source info">Acesse o código-fonte em : <a href="">source code</a></p>
+    </footer>
+    <script src="/script.js"></script>
+</body>
+
+</html>

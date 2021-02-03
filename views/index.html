@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+{% block head  %}{% endblock head%}
+{% block header %}
+<div class="buttons flex-row">
+    <a href="/search" class="btn btn-green">Procurar voluntários !</a>
+    <a href="/register" class="btn btn-purple">Cadastrar uma vaga !</a>
+</div>
+{% endblock %}
+{% block content %}
+<section class="articles">
+    <div class="title-articles">
+        <h3>Postagens</h3>
+    </div>
+    <div class="text-articles">
+        <p>Caro visitante, </p>
+        <p>
+            Next Help é desenvovido para você que procura ajuda ou que quer ajudar em alguma causa, sendo ela
+            social, ambiental, ..., ou qualquer outra causa que traga o bem ao próximo.
+        </p>
+        <p>
+            Meu nome é Lucas Hoffmann e desenvolvi essa plataforma com esse intuito, pensado para sem fins
+            lucrativos. Esta plataforma tem o objetivo de ajudar principalmente ONGs ou uma instituições
+            filantrópicas.
+        </p>
+        <p>Criado com amor ❤️ @Hoffmann</p>
+    </div>
+    <div class="control-notices">
+        <input type="radio" name="opt" value="1" checked>
+        <input type="radio" name="opt" value="2">
+        <input type="radio" name="opt" value="3">
+        <input type="radio" name="opt" value="4">
+    </div>
+    <div class="title-articles">
+        <h3>Últimas vagas anunciadas</h3>
+    </div>
+    {% include "articles.html" %}
+</section>
+{% endblock %}

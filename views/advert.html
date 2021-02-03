@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+{% block header %}
+{% endblock %}
+{% block content %}
+<section class="articles">
+    <div class="search-msg">
+        <p>Deseja anunciar uma vaga?<a href="/register"> Anuncie aqui!</a></p>
+    </div>
+    <div class="title-articles">
+        <h3>{{ advert.title }}</h3>
+    </div><div class="article-display">
+        <article>
+            <div class="img-article">
+                <img src="{{ advert.image }}" alt="">
+            </div>
+            <div class="content">
+                <h4 class="title">{{ advert.title }}</h4>
+                <p class="country">{{ advert.city }}</p>
+                <p class="description">{{ advert.info }}</p>
+                <p class="contact">Contato: <a href="">({{ advert.ddd }}) {{ advert.phone }}</a> ou <a href="mailto:{{ advert.email }}">{{ advert.email }}</a></p>
+            </div>
+        </article> 
+    </div>
+    <div class="search-msg">
+        <p>Esta publicação tem algo de errado?<a href="mailto:henriquelucashoffmann@gmail.com"> Solicitar remoção</a></p>
+    </div>
+</section>
+{% endblock %}

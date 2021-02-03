@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+{% block header %}
+<div class="buttons flex-row">
+    <a href="/search" class="btn btn-green">Procurar voluntários !</a>
+    <a href="/register" class="btn btn-purple">Cadastrar uma vaga !</a>
+</div>
+{% endblock %}
+{% block content %}
+<div class="register flex-row">
+    <div class="content">
+        <h1>Cadastre sua vaga de voluntariado</h1>
+        <form class="regForm" method="POST" action="/register">
+            <div class="input-wrapper">
+                <label for="title">Título: </label>
+                <input type="text" name="title" id="title" required>
+            </div>
+            <div class="input-wrapper">
+                <label for="city">Cidade: </label>
+                <input type="text" name="city" id="city" required>
+            </div>
+            <div class="input-wrapper">
+                <label for="image">Link de uma Imagem ou Logo: </label>
+                <input type="url" name="image" id="image">
+            </div>
+            <div class="input-wrapper">
+                <label for="info">Digite uma descrição:</label>
+                <textarea name="info" id="info" spellcheck="true" required></textarea>
+            </div>
+            <div class="input-wrapper">
+                <label for="email">Informe um e-mail</label>
+                <input type="email" name="email" id="email" required>
+            </div>
+            <div class="input-wrapper">
+                <label for="ddd">DDD:</label>
+                <input type="number" name="ddd" id="ddd" required>
+            </div>
+            <div class="input-wrapper">
+                <label for="phone">Telefone:</label>
+                <input type="tel" name="phone" id="phone" required>
+            </div>
+            <button type="submit">Registrar vaga de voluntariado</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

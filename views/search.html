@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+{% block header %}
+<form class="search" action="">
+    <input type="text" name="key" value="{{ key }}" placeholder="Insira alguma vaga pretendente...">
+    <button type="submit">Buscar</button>
+</form>
+{% endblock %}
+{% block content %}    
+    <section class="articles">
+        <div class="search-msg">
+            <p>Deseja anunciar uma vaga?<a href="/register"> Anuncie aqui!</a></p>
+        </div>
+        <div class="title-articles">
+            <h3>Resultados:</h3>
+        </div>
+        {% if adverts %}
+        {% asyncEach advert in adverts %}
+        <div class="article-display">
+            <article>
+                <div class="img-article">
+                    <img src="{{ advert.image }}" alt="">
+                </div>
+                <div class="content">
+                    <h4 class="title">{{ advert.title }}</h4>
+                    <p class="country">{{ advert.city }}</p>
+                    <p class="description">{{ advert.info }}</p>
+                    <p class="contact">Contato: <a href="">({{ advert.ddd }}) {{ advert.phone }}</a> ou <a href="mailto:{{ advert.email }}">{{ advert.email }}</a></p>
+                    <div class="right">
+                        <a class="acess btn btn-purple" href="/ad/{{ advert.id }}">Acessar</a>
+                    </div>
+                </div>
+            </article> 
+        </div>
+        {% endeach %}
+        {% else %}
+            <p>Nenhuma vaga encontrada !</p>
+        {% endif %}
+    </section>
+{% endblock %} 

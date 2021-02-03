@@ -1,0 +1,20 @@
+{% asyncEach advert in adverts %}
+<div class="flex">
+<div class="article-display">
+    <article>
+        <div class="img-article">
+            <img src="{{ advert.image }}" alt="">
+        </div>
+        <div class="content">
+            <h4 class="title">{{ advert.title }}</h4>
+            <p class="country">{{ advert.city }}</p>
+            <p class="description">{{ advert.info }}</p>
+            <p class="contact">Contato: <a href="">({{ advert.ddd }}) {{ advert.phone }}</a> ou <a href="mailto:{{ advert.email }}">{{ advert.email }}</a></p>
+            <div class="right">
+                <a class="acess btn btn-purple" href="/ad/{{ advert.id }}">Acessar</a>
+            </div>
+        </div>
+    </article> 
+</div>
+</div>
+{% endeach %}
